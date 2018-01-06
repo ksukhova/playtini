@@ -303,8 +303,18 @@ body {
     }
 }
 
-@media all and (max-width: $breakpoint-tablet) {
+@keyframes stamp-animation-out {
+    from {
+        left: 0;
+        opacity: 1;
+    }
+    to {
+        left: -25%;
+        opacity: 0;
+    }
+}
 
+@media all and (max-width: $breakpoint-tablet) {
     .navigation {
         &__menu {
             &-item {
@@ -325,31 +335,13 @@ body {
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-
     .content__right-profile__quiz {
         max-width: 60%;
-    }
-
-    @media all and (max-width: $stamp-size) {
-        .stamp {
-            display: none;
-        }
     }
 }
 
 @media all and (max-width: $stamp-size) {
     .stamp {
         animation-name: stamp-animation-out;
-    }
-
-    @keyframes stamp-animation-out {
-        from {
-            left: 0;
-            opacity: 1;
-        }
-        to {
-            left: -25%;
-            opacity: 0;
-        }
     }
 }
