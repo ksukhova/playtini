@@ -1,0 +1,83 @@
+$mobile: 768px;
+
+@media all and (max-width: $mobile) {
+    .header__search-area,
+    .content__left,
+    .content__right {
+        display: none;
+    }
+
+    .content {
+        margin-top: 10px;
+
+        &__container {
+            width: 100%;
+            padding: 0 10px;
+        }
+    }
+
+    .header {
+        &__plane {
+            &-img {
+                height: auto;
+            }
+        }
+
+        &__logo {
+            &-area {
+                &-img {
+                    width: 50%;
+                }
+                &-text {
+                    font-size: 14px;
+                    padding-left: 10px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+
+    .navigation {
+        &__menu {
+            flex-direction: column;
+            justify-content: stretch;
+
+            &-item {
+                width: auto;
+
+                &:hover {
+                    &:after {
+                        top: 0;
+                        left: 0;
+                        height: 49px;
+                        width: 8px;
+                        bottom: auto;
+                    }
+                }
+
+                &_mobile {
+                    display: block;
+                }
+            }
+        }
+
+        &__trigger {
+            &-label {
+                margin-top: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                &:before {
+                    content: url('./../images/arrows.png');
+                }
+            }
+            &:not(:checked) + .navigation {
+                display: none;
+            }
+            &:checked + .navigation {
+                display: block;
+            }
+        }
+    }
+}

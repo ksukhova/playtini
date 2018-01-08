@@ -125,6 +125,10 @@ body {
                     background-color: #db0029;
                 }
             }
+
+            &_mobile {
+                display: none;
+            }
         }
     }
 }
@@ -290,6 +294,11 @@ body {
     animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-name: stamp-animation-in;
+}
+
+.navigation__trigger,
+.navigation__trigger-label {
+    display: none;
 }
 
 @keyframes stamp-animation-in {
